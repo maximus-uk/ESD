@@ -1,23 +1,16 @@
-﻿<%@ Page Language="C#" masterpagefile="../_catalogs/masterpage/MPS/MPS.master" inherits="Microsoft.SharePoint.WebPartPages.WebPartPage, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" meta:progid="SharePoint.WebPartPage.Document" %>
+﻿<%@ Page Language="C#" masterpagefile="../_catalogs/masterpage/ESD/ESD.master" inherits="Microsoft.SharePoint.WebPartPages.WebPartPage, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" meta:progid="SharePoint.WebPartPage.Document" %>
 <%@ Register tagprefix="SharePoint" namespace="Microsoft.SharePoint.WebControls" assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 
 <%-- **************************************************
-     Site   	: CHDA Intranet
+     Site   	: ESD Intranet
      Page   	: Home
      Author 	: Jason Clark     
-     Date   	: March 2016
-     
-     Modified By: Jonathan Hinchliffe
-     Date		: 14th and 15th June 2017
-     Notes		: Added OOTB Performance list as a temporary solution
+     Date   	: Oct 2019
+     Notes		: Updated original page to work on SPO and Bootstrap 4
 
-     Modified By: Jason Clark 
-     Date		: Aug 2018
-     Notes		: Redeveloped and redesigned to new branding and template.
-     
-     Modified By: Jason Clark
-     Date		: Mar 2019
-     Notes		: Updated page to work on SPO and Bootstrap 4
+     Modified By: 
+     Date		: 
+     Notes		: 
      ************************************************** --%>
 
 <%@ Register TagPrefix="WpNs2" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
