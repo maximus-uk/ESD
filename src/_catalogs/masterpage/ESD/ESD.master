@@ -16,7 +16,7 @@
 	<meta name="GENERATOR" content="Microsoft SharePoint + Bootstrap Theme" />
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Expires" content="0" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 	<SharePoint:RobotsMetaTag runat="server" />
 
@@ -47,32 +47,28 @@
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/js/all.js"></script>	
-    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.js"></script>	
     <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.SPServices.min.js"></script>		   
-    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/jquery/jquery.tickerNews.min.js"></script>
-    <!--<script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/AngularJS/angularjs.min.js"></script>-->
+    <script type="text/javascript" src="/_catalogs/masterpage/maxuk/vendor/AngularJS/angularjs.min.js"></script>
     <script type="text/javascript" src="/_catalogs/masterpage/MAXUK/vendor/jquery/jquery.slidereveal.min.js"></script>
 
     <%-- ***** STYLES ***** --%>   
     <!-- ***** VENDOR ***** -->  
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/solid.min.css" />
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/fontawesome-free/css/regular.min.css" />
     <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk/vendor/jquery/jquery-ui.min.css" />
     
     <!-- ***** MAX UK Core ***** -->
-    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuk_corev15.css" />
-    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuksites.css" /> 
-    <link rel="stylesheet" type="text/css" href="/sites/esd/_catalogs/masterpage/esd/css/esd.css" /> 
-    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuk_corev15.css" />  <!--*** core SharePoint classic site CSS ***-->
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxuksites.css" />  <!-- *** CSS for all maximus uk classic sites *** -->
+    <link rel="stylesheet" type="text/css" href="/_catalogs/masterpage/maxuk_sites/css/maxukbranding.css" /> <!-- *** CSS branding for all maximus uk classic sites *** -->
+    <link rel="stylesheet" type="text/css" href="/sites/esd/_catalogs/masterpage/ESD/css/ESDBranding.css" /> <!-- *** CSS branding colours ESD *** -->
+    <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/custom.css" /> <!-- *** app or page specific CSS *** -->
     
     <!-- Add-In Apps -->
     <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/metrotiles.css" />
     <!--<link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventCalendar.css" />
     <link rel="stylesheet" type="text/css" href="/Style Library/maxuk/css/EventListing.css" />-->
-
-	<%-- ***** Chrome Resolution CSS files ***** --%>
-	<link rel="stylesheet" media="screen and (-webkit-min-device-pixel-ratio:0), screen and (-webkit-min-device-pixel-ratio:1), screen and (-webkit-min-device-pixel-ratio:2)" href="/Style%20Library/maxuk/css/custom_Chrome.css" />	
 
 	<%-- ***** Small Resolution CSS files ***** --%>
 	<link rel="stylesheet" media="screen and (max-width:1200px)" href="/Style%20Library/maxuk/css/custom_smlScreen.css" />	
@@ -98,8 +94,6 @@
 	
     <style type="text/css">
         .ms-cui-tt {visibility: hidden;}
-        .carousel-indicators li {background-color:#545487;}
-        .carousel-caption {background-color:#7676b8; opacity: .6;}
         /* Safari */
         @-webkit-keyframes spin {
           0% { -webkit-transform: rotate(0deg); }
@@ -118,7 +112,7 @@
     </style>
 </head>
 
-<body ng-app="chdaApp">
+<body ng-app="buApp">
 
     <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
     <SharePoint:ImageLink runat="server" />
@@ -133,28 +127,122 @@
 
             <header>
                 <div class="row">
-                    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 headerLeftContainer">
+                    <div class="col-9 headerLeftContainer">
                                                                      
                         <!-- ***** CHDA Logo ***** -->
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 pageLogo">                           
-                            <SharePoint:SiteLogoImage CssClass="ms-siteicon-img" name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="/PublishingImages/Logos/MPS_logo.png" runat="server" __designer:Preview="&lt;img id=&quot;ctl00_onetidHeadbnnr2&quot; class=&quot;ms-siteicon-img&quot; name=&quot;onetidHeadbnnr0&quot; Src=&quot;/PublishingImages/chda logo.png&quot; alt=&quot;CHDA Intranet&quot; /&gt;" __designer:Values="&lt;P N=&#39;CssClass&#39; T=&#39;ms-siteicon-img&#39; /&gt;&lt;P N=&#39;LogoImageUrl&#39; T=&#39;/PublishingImages/chda logo.png&#39; /&gt;&lt;P N=&#39;HasAttributes&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;ID&#39; T=&#39;onetidHeadbnnr2&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"></SharePoint:SiteLogoImage>
+                        <div class="col-2 pageLogo">                           
+                            <SharePoint:SiteLogoImage CssClass="ms-siteicon-img" name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="/PublishingImages/Logos/ESD_logo.png" runat="server" __designer:Preview="&lt;img id=&quot;ctl00_onetidHeadbnnr2&quot; class=&quot;ms-siteicon-img&quot; name=&quot;onetidHeadbnnr0&quot; Src=&quot;/PublishingImages/esd_logo.png&quot; alt=&quot;ESD Intranet&quot; /&gt;" __designer:Values="&lt;P N=&#39;CssClass&#39; T=&#39;ms-siteicon-img&#39; /&gt;&lt;P N=&#39;LogoImageUrl&#39; T=&#39;/PublishingImages/esd_logo.png&#39; /&gt;&lt;P N=&#39;HasAttributes&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;ID&#39; T=&#39;onetidHeadbnnr2&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"></SharePoint:SiteLogoImage>
                         </div>
                         
                         <!-- ***** Top Navigation ***** -->
-                        <div class="col-sm-10 col-md-10 col-lg-10 col-xs-10 nav-section">
-                            <nav class="navbar" id="custom-bootstrap-menu">
-                                
+                        <div class="col-10 nav-section" id="customNav">
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="container-fluid">
                                     <!-- **** mobile hamburger menu **** -->
-                                    <div class="nav navbar-header">
-                                       <!-- <button type="button" class="nav navbar-toggle" data-toggle="collapse" data-target="#chdaNavbarCollapse" aria-expanded="false" title="Navigation Menu">                                            
-                                            <span class="sr-only">Toggle navigation</span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                            <span class="icon-bar"></span>
-                                        </button>-->
-                                    </div>
-                                    <div class="navbar-collapse collapsed" id="chdaNavbarCollapse">
-                                        <div class="nav navbar-nav">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#customNavbar" aria-controls="customNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+
+                                    <div class="navbar-collapse collapse" id="customNavbar">
+
+                                        <ul class="navbar-nav mr-auto">
+                                            <li class="nav-item active"><a href="/sites/esd/" class="nav-link">Home</a></li>
+                                            <li class="nav-item dropdown">
+                                                <a href="" class="nav-link dropdown-toggle" id="aboutmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >About</a>
+                                                <div class="dropdown-menu" aria-labelledby="aboutmenu">
+                                                    <a href="/sites/esd/about/sitepages/charities.aspx" class="dropdown-item">Charities</a>
+                                                    <a href="/sites/esd/about/sitepages/myvoice.aspx" class="dropdown-item">My Voice</a>
+                                                    <a href="/sites/esd/about/sitepages/news.aspx" class="dropdown-item">News</a>
+                                                    <a href="/sites/esd/about/sitepages/suggestions.aspx" class="dropdown-item">Suggestions</a>
+                                                    <a href="/sites/esd/about/sitepages/smt.aspx" class="dropdown-item">SMT</a>
+                                                    <a href="/sites/esd/about/sitepages/locations.aspx" class="dropdown-item">Locations</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a href="" class="nav-link dropdown-toggle" id="teammenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teams</a>
+                                                <div class="dropdown-menu " aria-labelledby="teammenu">
+                                                    <a class="dropdown-item" href="/sites/esd/bids/">Bids</a>
+                                                    <a class="dropdown-item" href="/sites/esd/commercial/">Commercial</a>
+                                                    <a class="dropdown-item" href="/sites/esd/dp/">Delivery Partners</a>
+                                                    <a class="dropdown-item" href="/sites/esd/facilities/">Facilities</a>
+                                                    <a class="dropdown-item" href="/sites/esd/hr/">Human Resources</a>
+                                                    <!--<a class="dropdown-item" href="/sites/esd/change/">Quality</a>-->
+                                                    <a class="dropdown-item" href="/sites/esd/pmo/">Project Management Office</a>
+                                                    <!--<a class="dropdown-item" href="/sites/esd/sc/">Supply Chain</a>-->
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown megamenu-li">
+                                                <a id="megamneu02" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Knowledge Library</a>
+                                                <div class="dropdown-menu megamenu" aria-labelledby="megamenu02">
+                                                    <div class="row leftSection">
+                                                        <div class="col-x leftSection">
+                                                            <a class="dropdown-item" href="/sites/esd/knowledge/">Knowledge Home</a>
+                                                            <a class="dropdown-item" href="/sites/esd/knowledge/sitepages/branding.aspx">Branding</a>
+                                                            <a class="dropdown-item" href="/sites/esd/knowledge/sitepages/templates.aspx">Templates</a>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="row">
+                                                                <div class="col-x">
+                                                                    <h2 class="teamTitle">ESD</h2>
+                                                                    <a class="dropdown-item" href="/sites/esd/bids/sitepages/knowledge.aspx">Bids</a>
+                                                                    <a class="dropdown-item" href="/sites/esd/dp/sitepages/knowledge.aspx">Delivery Partners</a>
+                                                                    <a class="dropdown-item" href="/sites/esd/facilities/sitepages/knowledge.aspx">Facilities</a>
+                                                                    <!--<a class="dropdown-item" href="/sites/esd/hands/sitepages/knowledge.aspx">Health & Safety</a>-->
+                                                                    <a class="dropdown-item" href="/sites/esd/commercial/sitepages/knowledge.aspx">Commercial</a>
+                                                                    <!--<a class="dropdown-item" href="/sites/esd/change/sitepages/knowledge.aspx">Quality</a>-->
+                                                                    <a class="dropdown-item" href="/sites/esd/pmo/sitepages/knowledge.aspx">Project Management Office</a>
+                                                                    <!--<a class="dropdown-item" href="/sites/esd/sc/sitepages/knowledge.aspx">Supply Chain</a>-->
+                                                                </div>
+                                                                <div class="col-x">
+                                                                    <h2 class="teamTitle">Central Services</h2>                                                                
+                                                                    <a href="/bd/sitepages/knowledge.aspx" class="dropdown-item">Business Development</a>
+                                                                    <a href="/bi/sitepages/knowledge.aspx" class="dropdown-item">Business Information</a>
+                                                                    <a href="/communications/sitepages/knowledge.aspx" class="dropdown-item">Communications</a>
+                                                                    <a href="/dps/sitepages/knowledge.aspx" class="dropdown-item">Data Protection & Security</a>
+                                                                    <a href="/estates/sitepages/knowledge.aspx" class="dropdown-item">Estates</a>
+                                                                    <a href="/fa/sitepages/knowledge.aspx" class="dropdown-item">Finance & Accounting</a>
+                                                                    <a href="/hr/sitepages/knowledge.aspx" class="dropdown-item">Human Resources</a>
+                                                                    <a href="/it/sitepages/knowledge.aspx" class="dropdown-item">Information Technology</a>    
+                                                                    <a href="/legal/sitepages/knowledge.aspx" class="dropdown-item">Legal</a>
+                                                                    <a href="/sqare/sitepages/knowledge.aspx" class="dropdown-item">Safety Quality Assurance Risk & Environment</a>
+                                                                    <a href="/recruitment/sitepages/knowledge.aspx" class="dropdown-item">Recruitment</a>
+                                                                    <a href="/scp/sitepages/knowledge.aspx" class="dropdown-item">Supply Chain & Procurement</a>                                                    
+                                                                    <a href="/tandd/sitepages/knowledge.aspx" class="dropdown-item">Talent & Development</a>                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a href="" class="nav-link dropdown-toggle" id="ssmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Central Services</a>
+                                                <div class="dropdown-menu" aria-labelledby="ssmenu">
+                                                    <a href="/bd/" class="dropdown-item">Business Development</a>
+                                                    <a href="/bi/" class="dropdown-item">Business Information</a>
+                                                    <a href="/communications/" class="dropdown-item">Communications</a>
+                                                    <a href="/dps/" class="dropdown-item">Data Protection & Security</a>
+                                                    <a href="/estates/" class="dropdown-item">Estates</a>
+                                                    <a href="/fa/" class="dropdown-item">Finance & Accounting</a>
+                                                    <a href="/hr/" class="dropdown-item">Human Resources</a>
+                                                    <a href="/it/" class="dropdown-item">Information Technology</a>
+                                                    <a href="/legal/" class="dropdown-item">Legal</a>
+                                                    <a href="/sqare/" class="dropdown-item">Safety Quality Assurance Risk & Environment</a>
+                                                    <a href="/recruitment/" class="dropdown-item">Recruitment</a>
+                                                    <a href="/scp/" class="dropdown-item">Supply Chain & Procurement</a>                                                    
+                                                    <a href="/tandd/" class="dropdown-item">Talent & Development</a>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a href="" class="nav-link dropdown-toggle" id="ssmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Business Units</a>
+                                                <div class="dropdown-menu" aria-labelledby="ssmenu">
+                                                    <a href="/sites/chda/" class="dropdown-item" target="_blank">CHDA</a>
+                                                    <a href="/sites/esd/" class="dropdown-item" target="_blank">ESD</a>
+                                                    <a href="/sites/hml/" class="dropdown-item" target="_blank">HML</a>
+                                                    <a href="/sites/revitalised/" class="dropdown-item" target="_blank">Revitalised</a>
+                                                </div>
+                                            </li>                                               
+                                        </ul> 
+                                        <!--
                                             <PublishingNavigation:PortalSiteMapDataSource ID="topSiteMap" 
                                             runat="server" EnableViewState="false" 
                                             SiteMapProvider="GlobalNavigationSwitchableProvider" 
@@ -169,13 +257,13 @@
                                             UseSimpleRendering="true" 
                                             UseSeparateCss="true" 
                                             Orientation="Horizontal" 
-                                            StaticDisplayLevels="1" 
+                                            StaticDisplayLevels="3" 
                                             AdjustForShowStartingNode="true" 
                                             MaximumDynamicDisplayLevels="4" 
                                             SkipLinkText="" __designer:Templates="&lt;Group Name=&quot;Item Templates&quot;&gt;&lt;Template Name=&quot;StaticItemTemplate&quot; Flags=&quot;D&quot; Content=&quot;&quot; /&gt;&lt;Template Name=&quot;DynamicItemTemplate&quot; Flags=&quot;D&quot; Content=&quot;&quot; /&gt;&lt;/Group&gt;"/>
-                                        </div>
+                                    -->
                                     </div>
-                               
+                                </div>
                             </nav>
 
                             <!-- ***** Site Page Title & Breadcrumbs ***** -->
@@ -201,7 +289,7 @@
                     </div> <!-- ***** End Header Left Container ***** -->
 
                     <!-- ***** Header Right Container ***** -->
-                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 headerRightContainer">
+                    <div class="col-3 headerRightContainer">
 
                         <!-- ***** Search Box ***** -->
                         <div class="navbar-search" id="search">
@@ -229,20 +317,36 @@
                             </SharePoint:AjaxDelta>
                         </div>
 
-                        <!-- ***** Site Welcome Message and Link to User Profile Page ***** -->
-                        <div class="welcomeText" id="welcomeMsg"></div>
+                        <!-- ***** Site Welcome Message and Link to User O365 Apps ***** -->
+                        <div class="welcomeText">
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="container-fluid">
+                                    <div class="navbar-collapse collapse" id="customNavbar">
+                                        <ul class="navbar-nav mr-auto">                            
+                                            <li class="nav-item dropdown">
+                                                <a href="" class="nav-link dropdown-toggle" id="welcomeMsg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                                <div class="dropdown-menu" aria-labelledby="welcomeMsg">
+                                                    <a id="myOneDriveLink" href="" class="dropdown-item" target="_blank">My OneDrive</a>
+                                                    <a id="myDelveLink" href="" class="dropdown-item" target="_blank">My Delve</a>
+                                                    <a id="myAppsLink" href="" class="dropdown-item" target="_blank">My Office 365 Apps</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
                         
                         <div class="adminTools">                          
 
                             <!-- ***** Site Email Link ***** -->
-                            <a title="Contact us about the Intranet" href="mailto:CIntranet@maximusuk.co.uk?subject=New%20Enquiry%20from%20CHDA%20Intranet" class="siteEmail">
+                            <a title="Contact us about the Intranet" href="mailto:esdintranet@maximusuk.co.uk?subject=New%20Enquiry%20from%20ESD%20Intranet" class="siteEmail">
                                 <i class="fa fa-envelope"></i>
                             </a>
 
-                            <!-- ***** Site Help Link ***** -->                       
+                            <!-- ***** Site Help Link *****                        
                             <a title="Intranet Help" id="O365_MainLink_Help" class="siteHelp o365cs-nav-item o365cs-nav-button ms-bgc-tdr-h o365button o365cs-topnavText"><i class='fa fa-question'></i></a>
-
-                            <a title="Test page responsiveness" id="btnResponsive" href="#" onclick="testResponsive();return false;" class="siteTest"><i class="fas fa-expand-arrows-alt"></i></a>
+                            -->
 
                             <!-- ***** Suite Bar - Site Acions ***** -->
                             <SharePoint:AjaxDelta runat="server" 
@@ -338,14 +442,11 @@
 									        </CustomTemplate>
                                         </SharePoint:SiteActions>
                                                                                
-                                    </div>
-                                    
+                                    </div>                                    
                                 </div>
                             </SharePoint:AjaxDelta>
-
                         </div>
                     </div>
-                </div>
             </header>
 
             <div id="s4-workspace">
@@ -362,19 +463,32 @@
                                     </div>
                                 </div>
                             </div>                            
-						</div>
+						            </div>
 
                         <div class="pageLoader" id="pageLoader">
                             <h3>Page Loading, please wait...</h3>
                             <div class="loader"> </div>
                         </div>
 
+                        <div id="pageAlert" aria-live="polite" aria-atomic="true">
+                            <div class="toast" data-autohide="false">
+                                <div class="toast-header" id="toastHead">
+                                    <!--<svg class="rounded mr-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                                        preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                                        <rect fill="#ff0000" width="100%" height="100%" /></svg>-->
+                                    <h3></h3>
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="toast-body" id="toastBody">
+                            </div>
+                        </div>
+
                         <div class="watermark">Development</div>
 
                         <!-- main row --> 
-                        <div class="hidden msgBannerAdjust row" id="pageContent" >  
-
-                            <!--<asp:ContentPlaceHolder id="PlaceHolderMain" runat="server"></asp:ContentPlaceHolder>-->
+                        <div class="hidden" id="pageContent" >  
 
                             <!-- *********************** -->
                             <!-- **** Left Section ***** -->
@@ -385,17 +499,43 @@
                                 <div id="slideshow"></div>
 
                                 <!-- ***** Site welcome text for team front door pages ***** -->
-                                <div id="siteWelcomeText"></div>
+                                <div id="siteWelcomeText">
+                                    <div class="title"></div>
+                                    <div class="body"></div>
+                                </div>  
 
                                 <!-- ***** Page Content ***** -->
                                 <div id="newContent"></div>
                                 <asp:ContentPlaceHolder id="PlaceHolderPageContent" runat="server"></asp:ContentPlaceHolder>
-
                             </div>  <!-- End Left Section -->
 
                             <div class="container left-shadow-overlay" id="slider">
                                 <h3 role="button" class="btn btn-alert" id='trigger'>Apps</h3>
                                 <div class="row sidebar">   
+                                    <div class="col-3 appTabs">
+                                        <ul class="nav flex-column nav-pills pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="links-tab" data-toggle="pill" href="#links" role="tab" aria-controls="v-pills-links" aria-selected="true">Useful Links</a>
+                                                <div id="editLinks"></div>                                               
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="metrotile-tab" data-toggle="pill" href="#metrotilesApp" role="tab" aria-controls="v-pills-metrotiles" aria-selected="false">Metrotiles</a>
+                                                <div id="editTiles"></div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="help-tab" data-toggle="pill" href="#help" role="tab" aria-controls="v-pills-help" aria-selected="false">Help Desk</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="question-tab" data-toggle="pill" href="#question" role="tab" aria-controls="v-pills-question" aria-selected="false">Ask a Question</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="location-tab" data-toggle="pill" href="#location" role="tab" aria-controls="v-pills-location" aria-selected="false">Locations</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="room-tab" data-toggle="pill" href="#room" role="tab" aria-controls="v-pills-room" aria-selected="false">Room Booking</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                     <div class="appContent scrollbar">
                                         <div class="tab-content" id="v-pills-tabContent">
 
@@ -404,6 +544,8 @@
                                                     <div class="row linkContainer" id="usefulLinks">
                                                         <div id="accordion" style="width:100%">                        
                                                             <div id="teamLinks"></div>
+                                                            <div id="buLinks"></div>
+                                                            <div id="maxLinks"></div>
                                                         </div> <!-- end accordion -->
                                                     </div> <!-- end link container -->
                                                 </div> <!-- end useful links section -->			                                                                                    
@@ -448,24 +590,44 @@
                                             <div class="tab-pane fade" id="room" role="tabpanel" aria-labelledby="v-pills-room-tab">Room booking app.</div>
                                         </div>
                                     </div>
-
-                                    <div class="col-3 appTabs">
-                                        <div class="nav flex-column nav-pills pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                        <a class="nav-link" id="links-tab" data-toggle="pill" href="#links" role="tab" aria-controls="v-pills-links" aria-selected="true">Useful Links</a>
-                                        <a class="nav-link" id="metrotile-tab" data-toggle="pill" href="#metrotilesApp" role="tab" aria-controls="v-pills-metrotiles" aria-selected="false">Metrotiles</a>
-                                        <a class="nav-link" id="help-tab" data-toggle="pill" href="#help" role="tab" aria-controls="v-pills-help" aria-selected="false">Help Desk</a>
-                                        <a class="nav-link" id="question-tab" data-toggle="pill" href="#question" role="tab" aria-controls="v-pills-question" aria-selected="false">Ask a Question</a>
-                                        <a class="nav-link" id="location-tab" data-toggle="pill" href="#location" role="tab" aria-controls="v-pills-location" aria-selected="false">Locations</a>
-                                        <a class="nav-link" id="room-tab" data-toggle="pill" href="#room" role="tab" aria-controls="v-pills-room" aria-selected="false">Room Booking</a>
-                                    </div>
-                                    </div>
                                 </div>                                    
                             </div>                                                        
-
                         </div> <!-- end main row -->
                     </div> <!-- end Main Container -->
                 </div> <!-- end Body Container -->
             </div> <!-- end Workspace -->
+
+            <!-- ********************************************************
+                 ******************** Security Options ******************
+                 ******************************************************** -->
+
+            <!-- ***** Security Options for Read & View Permissions ***** -->
+            <SharePoint:SPSecurityTrimmedControl ID="SPSecurityControl1" runat="server" AuthenticationRestrictions="AuthenticatedUsersOnly" Permissions="ViewPages" PermissionContext="CurrentSite">
+                <script type="text/javascript">
+                    $("#zz7_SiteActionsMenu_t").addClass("ms-hidden");
+                </script>
+                <style type="text/css">
+                </style>
+            </SharePoint:SPSecurityTrimmedControl>
+
+            <!-- ***** Security Options for Owners, Power User Permissions ***** -->
+            <SharePoint:SPSecurityTrimmedControl ID="SPSecurityControl2" runat="server" AuthenticationRestrictions="AuthenticatedUsersOnly" Permissions="ManagePermissions" PermissionContext="CurrentSite">
+                <script type="text/javascript">
+                </script>
+                <style type="text/css">
+                    #mp1_0_1, #mp1_0_2, #mp1_0_3, #mp1_0_4, #mp1_0_5, #mp1_0_6{display:none}
+                </style>
+            </SharePoint:SPSecurityTrimmedControl>
+
+            <!-- ***** Security Options Admin Permissions ***** -->
+            <SharePoint:SPSecurityTrimmedControl ID="SPSecurityControl3" runat="server" AuthenticationRestrictions="AuthenticatedUsersOnly" Permissions="ManageWeb" PermissionContext="CurrentSite">
+                <script type="text/javascript">
+                    $("#zz7_SiteActionsMenu_t").removeClass("ms-hidden");
+                </script>
+                <style type="text/css">
+                    #mp1_0_1, #mp1_0_2, #mp1_0_3, #mp1_0_4, #mp1_0_5, #mp1_0_6{display:inherit}
+                </style>
+            </SharePoint:SPSecurityTrimmedControl>
 
             <!-- Form Digest -->
             <asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
@@ -496,10 +658,11 @@
 
     <!-- **** Custom App Scripts **** -->
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteLinks.js"></script> 
+    <script type="text/javascript" src="/Style%20Library/maxuk/js/sitePowerUser.js"></script>  
+    <script type="text/javascript" src="/Style%20Library/maxuk/js/siteMetroTiles.js"></script>
+    <script type="text/javascript" src="/Style%20Library/maxuk/js/siteTeamLinks.js"></script>
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteContacts.js"></script>
     <script type="text/javascript" src="/Style%20Library/maxuk/js/siteMessages.js"></script>  
-    <script type="text/javascript" src="/Style%20Library/maxuk/js/importantMessage.js"></script>
-    <script type="text/javascript" src="/Style%20Library/maxuk/js/siteMetroTiles.js"></script>
 
     <script type="text/javascript">
         
@@ -508,50 +671,66 @@
         var submitHook = function () { return false; };				
         var siteURL = _spPageContextInfo.webAbsoluteUrl;
         var domainURL = siteURL.split("/")[2];	     
-        var isAdmin = false;	  
+        var parentSite ="https://"+domainURL+"/sites/"+siteURL.split('/')[4]+"/";
+        var siteName = siteURL.split('/')[5];	  
         var userName = "";
         var contentCode;
+        var sWidth = screen.width;
+        var sHeight = screen.height;
+        var dHeight = $(document).height();
+        var dWidth = $(document).width();
+        var sliderPos = "";
 
         theForm._spOldSubmit = theForm.submit; theForm.submit = function () {
             if (!submitHook()) { this._spOldSubmit(); }
         };
 
+        /* App Sidebar Slider */
         $('#slider').slideReveal({
             trigger: $("#trigger"),
             push: false,
             position: "right",
             speed: 600,
-            autoEscape: false
+            autoEscape: true
         });        
 
+        var reAdjust = function () {
+            if (($('.knowledgeTabContainer').outerWidth()) < widthOfList()) {
+                $('.scroller-right').show().css('display', 'flex');
+            }
+            else {
+                $('.scroller-right').hide();
+            }
+
+            if (getLeftPosi() < 0) {
+                $('.scroller-left').show().css('display', 'flex');
+            }
+            else {
+                $('.item').animate({ left: "-=" + getLeftPosi() + "px" }, 'slow');
+                $('.scroller-left').hide();
+            }
+
+            if(dWidth >=1900 && dWidth <2600){
+                $('#slider').css('right','-1170px');
+            }
+            if(dWidth >1500 && dWidth <1900){
+                $('#slider').css('right','-55vw');
+            } 
+            if(dWidth >=1900 && dWidth <2100){
+                $('#slider').css('right','-51.5vw');
+            }  
+        }
+
+        // *** Document Object Model (DOM) Loaded
         $(function () {
+            var isPowerUser = false;            
+            localStorage.clear();
 
             SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);
-
             $('#newContent').append(contentCode);
             
-            var sWidth = screen.width;
-            var sHeight = screen.height;
-            var dHeight = $(document).height();
-            var dWidth = $(document).width();
             console.log('Screen Height :' + sHeight + ' Screen Width :'+ sWidth);
             console.log('Document Height :' + dHeight + ' Document Width :' + dWidth);
-
-            $('#pageLoader').addClass('hidden');
-            $('#pageContent').removeClass('hidden');
-
-            switch(siteURL.split('/')[5]){
-                case 'about':
-                case 'knowledge':
-                case undefined:
-                    console.log('getting Tiles');
-                    getTiles(siteURL);
-                    break;
-                default:
-                    console.log('getting team tiles');
-                    getTeamTiles(siteURL);
-                    break;
-            }            
 
             /***** Check for temp user *****/
             $().SPServices({
@@ -561,20 +740,16 @@
                 completefunc: function (xData, Status) {
 
                     //If the current User does belong to a specific group
-                    if ($(xData.responseXML).find("Group[Name='CHDA Intranet Visitors']").length === 1) {
+                    if ($(xData.responseXML).find("Group[Name='"+siteURL.split('/')[4]+" Intranet Visitors']").length === 1) {
                         var agreement = getCookie();
-
-                        //***** remove search function *****/
-                        //$('#search').addClass('hidden');
                         var disclaimURL = 'https://'+ domainURL + '/SitePages/disclaimer.html';
-                        //alert(disclaimURL);
 
                         //checks for cookie and displays disclaimer alert if new user
                         if (agreement === "") {
                             window.open(disclaimURL, '_self', 'toolbar=no,status=no,titlebar=no,scrollbars=no');
                         }
 
-                        $('#custom-bootstrap-menu ul li:nth-child(4) ul li:nth-child(3)').addClass('hidden');
+                        //$('#custom-bootstrap-menu ul li:nth-child(4) ul li:nth-child(3)').addClass('hidden');
                         //$('#mainWindow').removeClass('hidden');                                                      
                         $('#restrictApp').removeClass('hidden');	
                             
@@ -589,13 +764,51 @@
                 headers: { "Accept": "application/json; odata=verbose" },
                 success: function (data) {
                     siteTitle = data.d.Title;
-                    getLinkData(siteURL, siteTitle);
+                    isPowerUser = checkPowerUser(siteTitle);
+                    switch(siteName){
+                        case undefined:
+                            siteName = siteURL.split('/')[4];
+                            getTiles(siteURL);
+                            getLinkData(siteURL, siteTitle);
+                            getTeamLinkData(siteURL,siteTitle);
+                            if(isPowerUser){
+                                $('#editLinks').append('<a href="'+parentSite+'/Lists/Useful%20Links/'+siteName+'.aspx" target="_blank" title="Edit Useful Links List"><i class="fas fa-edit"></i></a>');
+                                $('#editTiles').append('<a href="'+siteURL+'/Lists/Metrotiles/AllItems.aspx?viewid=98f33d3e-29c0-4e23-8506-d7a3715b4634" target="_blank" title="Edit Metrotiles List"><i class="fas fa-edit"></i></a>');                                
+                                $('#editSlides').append('<a href="'+siteURL+'/Lists/Slides/current.aspx" target="_blank" title="Edit Slides"><i class="fas fa-edit"></i></a>');
+                            }
+                            break;
+                        case 'about':
+                        case 'knowledge':
+                            var rootURL="https://"+domainURL+"/sites/"+siteURL.split('/')[4]+"/";
+                            console.log("rooturl="+rootURL);
+                            getTiles(rootURL);
+                            getLinkData(siteURL, siteTitle);
+                        default:
+                            getTeamTiles(siteURL);
+                            getLinkData(siteURL, siteTitle);
+                            getTeamLinkData(siteURL,siteTitle);
+                            getContacts(siteURL,"Contacts");
+                            getWelcomeText(siteTitle);
+                            if(isPowerUser){
+                                $('#changeLink').append('<a href="'+siteURL+'/Lists/Change_Alerts/Current.aspx" target="_blank" title="Edit Change List"><i class="fas fa-edit"></i></a>');
+                                $('#faqLink').append('<a href="'+siteURL+'/Lists/FAQs/AllItems.aspx" target="_blank" title="Edit FAQ List"><i class="fas fa-edit"></i></a>');
+                                $('#contactLink').append('<a href="'+siteURL+'/Lists/Contacts/AllItems.aspx" target="_blank" title="Edit Contacts List"><i class="fas fa-edit"></i></a>');
+                                $('#editLinks').append('<a href="'+parentSite+'/Lists/Useful%20Links/'+siteName+'.aspx" target="_blank" title="Edit Useful Links List"><i class="fas fa-edit"></i></a>');
+                                $('#editTiles').append('<a href="'+siteURL+'/Lists/Metrotiles/AllItems.aspx?viewid=98f33d3e-29c0-4e23-8506-d7a3715b4634" target="_blank" title="Edit Metrotiles List"><i class="fas fa-edit"></i></a>');
+                                $('#editWelcome').append('<a href="'+siteURL+'/Lists/WelcomeMessage/AllItems.aspx" target="_blank" title="Edit Welcome Message List"><i class="fas fa-edit"></i></a>');
+                            }                            
+                            break;
+                    } 
+                    if(isPowerUser){
+                        $("#zz7_SiteActionsMenu_t").removeClass("ms-hidden");
+                        $("#mp1_0_2_Anchor").addClass('menuTest');
+                        /*$("#zz7_SiteActionsMenu li:nth-child(4)").addClass('ms-hidden');*/
+                    }         
                 },
                 error: function (data) {
                     console.log("Error: " + data);
                 }
             });
-
             console.log('DOM ready from Master page');
 
             //ExecuteOrDelayUntilScriptLoaded(function () {
@@ -611,7 +824,7 @@
         // ***** Load SharePoint ClientContext
         function sharePointReady() {
             try {
-
+/*
                 getMessages();
                 console.log("getting important messages");
 
@@ -628,7 +841,7 @@
                     if (!timer) return !1;
                     this.startTicker();
                 });
-
+*/
                 context = new SP.ClientContext.get_current();
                 web = context.get_web();  
 
@@ -642,6 +855,12 @@
         //$(window).on('beforeunload', function (e) {
            // document.cookie = 'PartnerAgreement' + '=; expires=Tue, 01-Jan-80 00:00:00 GMT' + '; path=/';
         //});
+
+        // *** Window Loaded
+        $(window).on('load',function(e){
+            $('#pageLoader').addClass('hidden');
+            $('#pageContent').removeClass('hidden');
+        });
 
         function writeFAQ(site) {
             var faqText = $('textarea#faqQuestionText').val();
@@ -678,44 +897,12 @@
             return "";
         }
 
-        function testResponsive() {
-
-            var resolutions = [1200, 1250, 1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650, 1700, 1750, 1800, 1850, 1900, 1920, 1950, 2000, 2050, 2100, 2150, 2200, 2300, 2400, 2500, 2600, 2700, 2800];
-
-            var dHeight = screen.height;
-            for (var i = 0; i < resolutions.length; i++) {
-                var dWidth = resolutions[i];
-                
-                window.setTimeout(resizeWindow(dWidth,dHeight), 3000);
-            }
-        }
-
-        function resizeWindow(dWidth,dHeight) {
-            window.resizeTo(dWidth, dHeight);
-           alert('Testing Screen Resolution - Height :' + dHeight + ' x Width :' + dWidth);
-        }
-
         function getCurrentUser() {
-            //***** Get first name of user from SharePoint user profile service and display on screen
-            var userName = $().SPServices.SPGetCurrentUser({
-                fieldName: 'FirstName',
-                debug: false
-            });
+            //***** Get name of user from SharePoint user profile service and display on screen
 
+            var tenantDomain = siteURL.split('/')[2];
+            var tenant = tenantDomain.split('.')[0];            
             var userID = _spPageContextInfo.userId;
-            $("#welcomeMsg").append("Welcome " + "<a href='" + siteURL + "/my/'>" + userName + "</a>"); 
-        }
-
-            //if (userName.split("|")[2] != undefined) {
-            //    userName = userName.split("|")[1];
-            //};
-
-            //var userID = _spPageContextInfo.userId;
-            //$("#welcomeMsg").append("Welcome " + "<a href='" + siteURL + "/my/'>" + userName + "</a>"); 
-
-            //$("#welcomeMsg").append("Welcome " + "<a href='https://intranet.chda.maxuk.co.uk/my/'>" + (userName) + "</a>");
-/*         
-            var userid = _spPageContextInfo.userId;
             var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/SP.UserProfiles.PeopleManager/GetMyProperties"; //"/_api/web/getuserbyid(" + userid + ")";
             var requestHeaders = { "accept" : "application/json;odata=verbose" };
 
@@ -728,35 +915,44 @@
                 error : onError
             });
        
-        function onSuccess(data) {
+            function onSuccess(data) {
 
-            var firstName = "";
-            var dataResults = data.d.UserProfileProperties.results;
-            var displayName = data.d.DisplayName;
-            for (var i = 0; i < dataResults.length; i++) {
-                var property = dataResults[i];
-                if (property.Key === "FirstName") {
-                    firstName = property.Value;
-                    console.log(firstName);
+                var firstName = "";
+                var lastName = "";
+                var dataResults = data.d.UserProfileProperties.results;
+                var displayName = data.d.DisplayName;
+                for (var i = 0; i < dataResults.length; i++) {
+                    var property = dataResults[i];
+                    console.log(property.Key);
+                    if (property.Key === "FirstName") {
+                        firstName = property.Value;
+                    }
+                    if (property.Key === "UserName"){
+                        userName = property.Value;
+                    }
                 }
+                var myURL = "https://"+[tenantDomain.slice(0, tenant.length), "-my.", tenantDomain.slice(tenant.length+1)].join('');
+                var myApps = "https://www.office.com/?auth=2&home=1&username="+userName+"&from=ShellLogo";
+                var myDelve="https://gbr.delve.office.com/";
+
+                //if (displayName.indexOf('@') !== -1) { userName = displayName.split('@')[0] }
+                //console.log(firstName+"."+lastName+" "+userName+" "+myApps);
+
+                $("#welcomeMsg").append("Welcome " + firstName);
+                $('#myOneDriveLink').prop('href',myURL);
+                $('#myAppsLink').prop('href',myApps);
+                $('#myDelveLink').prop('href',myDelve);
+
+                //return dataResults.Title; //.split(' ')[0];
             }
-            //userName = dataResults.Title;
-            //alert(userName);
-            
-            if (displayName.indexOf('@') !== -1) { userName = displayName.split('@')[0] }
 
-            $("#welcomeMsg").append("Welcome " + "<a href='" + siteURL + "/my/'>" + userName + "</a>"); 
-            //return dataResults.Title; //.split(' ')[0];
+            function onError(error) {
+                console.log(error);
+            }
         }
 
-        function onError(error) {
-          console.log(error);
-        }
-*/
     </script>
-
     <!--***** Custom page JS code *****-->
-    <asp:ContentPlaceHolder id="PlaceHolderPageCode" runat="server"></asp:ContentPlaceHolder>
-        
+    <asp:ContentPlaceHolder id="PlaceHolderPageCode" runat="server"></asp:ContentPlaceHolder>        
 </body>
 </SharePoint:SPHtmlTag>
